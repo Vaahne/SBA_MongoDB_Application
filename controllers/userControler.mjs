@@ -1,5 +1,4 @@
 import User from '../models/Users.mjs';
-import data from '../utilities/data.mjs';
 
 async function addUser(req,res){
     let newUser = await User.create(req.body);
@@ -27,12 +26,6 @@ async function updateUser(req,res) {
     const user = await User.findByIdAndUpdate(req.params.id,req.body,{new:true});
     if(!user) res.json({message: `No user found with given id!!`});
     res.json(user);
-}
-
-async function seed(req,res){
-    const userData = data.users;
-    await User.insertMany(userData);
-    res.json({message: 'Successfully seeded'});
 }
 
 

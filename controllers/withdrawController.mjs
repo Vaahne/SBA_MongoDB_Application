@@ -1,5 +1,4 @@
 import Withdraw from '../models/Withdraw.mjs';
-import data from '../utilities/data.mjs';
 
 async function newWithdraw(req,res){
     let newWithdraw = await Withdraw.create(req.body);
