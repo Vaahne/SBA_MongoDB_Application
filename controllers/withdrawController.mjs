@@ -14,13 +14,13 @@ async function getAllWithdraws(req,res) {
     res.json(allWithdraws);
 }
 async function getSpecificWithdraws(req,res) {
-    const Withdraw = await Withdraw.findById(req.params.id);
-    res.json(Withdraw);
+    const withdraw = await Withdraw.findById(req.params.id);
+    res.json(withdraw);
 }
 
 async function updateWithdraw(req,res) {
-    const Withdraw = await Withdraw.findByIdAndUpdate(req.params.id,req.body,{new:true});
-    res.json(Withdraw);
+    const withdraw = await Withdraw.findByIdAndUpdate(req.params.id,req.body,{new:true});
+    res.json(withdraw);
 }
 
 

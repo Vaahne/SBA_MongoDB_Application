@@ -17,9 +17,9 @@ connectDB();
 
 // routes
 app.use('/seed',seedRouter);
-app.use('/bank/account',accountRouter);
+app.use('/bank/accounts',accountRouter);
 app.use('/bank/users',userRouter);
-app.use('/bank/withdraw',withdrawRouter);
+app.use('/bank/withdraws',withdrawRouter);
 
 // error middle ware
 app.use(globalError);

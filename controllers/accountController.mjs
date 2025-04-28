@@ -13,21 +13,14 @@ async function getAllAccounts(req,res) {
     const allAccounts = await Account.find({});
     res.json(allAccounts);
 }
-async function getSpecificAccounts(req,res) {
-    const Account = await Account.findById(req.params.id);
-    res.json(Account);
+async function getSpecificAccount(req,res) {
+    const account = await Account.findById(req.params.id);
+    res.json(account);
 }
 
 async function updateAccount(req,res) {
-    const Account = await Account.findByIdAndUpdate(req.params.id,req.body,{new:true});
-    res.json(Account);
+    const account = await Account.findByIdAndUpdate(req.params.id,req.body,{new:true});
+    res.json(account);
 }
 
-async function seed(req,res){
-    const userData = data.users;
-    await User.insertMany(userData);
-    res.json({message: 'Successfully seeded'});
-}
-
-
-export default {deleteAccount,updateAccount,getAllAccounts,getSpecificAccounts,addAccount};
+export default {deleteAccount,updateAccount,getAllAccounts,getSpecificAccount,addAccount};

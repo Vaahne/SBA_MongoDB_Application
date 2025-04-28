@@ -5,13 +5,13 @@ const router = express.Router();
 
 
 router.get('/seed',async(req,res) => {
-    
+
 });
 
 router.route('/').get(accountControler.getAllAccounts)
                  .post(accountControler.addAccount);
                  
-router.route('/:id').get(accountControler.getSpecificAccounts)
+router.route('/:id').get(accountControler.getSpecificAccount)
                     .delete(accountControler.deleteAccount)
                     .put(accountControler.updateAccount);
 
