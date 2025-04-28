@@ -16,7 +16,8 @@ app.use(express.json());
 connectDB();
 
 // routes
-app.use('/seed',seedRouter);
+app.use('/seed',seedRouter);    // can use this route once to the data to be seeded for all the models
+
 app.use('/bank/accounts',accountRouter);
 app.use('/bank/users',userRouter);
 app.use('/bank/withdraws',withdrawRouter);
