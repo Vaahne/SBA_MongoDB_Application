@@ -14,6 +14,7 @@ POST | /bank/users | Post User to DB |
 PUT | /bank/users/:id | update user details with id |
 GET | /bank/accounts | To get all accounts|
 GET | /bank/accounts/:id | To get specific account with id |
+GET | /bank/accounts/balance/:bal | To get all accounts with balance > given number |
 DELETE | /bank/accounts/:id | To delete specific account |
 POST | /bank/accounts | Post account into DB |
 PUT | /bank/accounts/:id | update account details with id |

@@ -19,8 +19,9 @@ function bankHateoas(req,res){
 
             {href: '/bank/users/:id',rel: 'Bank User',type: 'DEETE'},
             {href: '/bank/accounts/:id',rel: 'Bank Account',type: 'DELETE'},           
-            {href: '/bank/withdraws/:id',rel: 'Bank Withdraw',type: 'DELETE'}
-            
+            {href: '/bank/withdraws/:id',rel: 'Bank Withdraw',type: 'DELETE'},
+
+            {href : '/bank/accounts/balance/:bal',rel:'Balance above given number',type:'GET'}
     ]
     });
 }

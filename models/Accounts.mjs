@@ -31,4 +31,9 @@ const accountSchema = new mongoose.Schema({
 });
 accountSchema.index({branch : 1});
 accountSchema.index({openDate : -1});
+
+accountSchema.statics.balanceAbove = function (val){
+    return this.find({balance : {$gt : val}});
+}
+
 export default mongoose.model("Account",accountSchema);

@@ -1,5 +1,6 @@
 import express from 'express';
 import accountControler from '../controllers/accountController.mjs';
+import Accounts from '../models/Accounts.mjs';
 
 const router = express.Router();
 
@@ -10,5 +11,9 @@ router.route('/:id').get(accountControler.getSpecificAccount)
                     .delete(accountControler.deleteAccount)
                     .put(accountControler.updateAccount);
 
+router.get("/balance/:bal",async (req,res)=>{
+    const accounts = await Accounts.balanceAbove(req.params.bal);
+    res.json(accounts);
+});
 
 export default router;
