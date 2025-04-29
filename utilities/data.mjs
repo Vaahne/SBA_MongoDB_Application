@@ -1,3 +1,4 @@
+//  sample data for all the models/collections
 const accounts = [
     {
       "accountNumber": "ACC001",

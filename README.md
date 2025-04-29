@@ -6,6 +6,7 @@
  ## API Reference
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION
 ------------ | ------------- | -------------------
+GET | / | all the routes using hateoas |
 GET | /seed | seeding the data into DB |
 GET | /bank/users | To get all users|
 GET | /bank/users/:id | To get specific user with id |

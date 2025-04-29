@@ -5,7 +5,7 @@ import data from '../utilities/data.mjs';
 import express from 'express';
 
 const router = express.Router();
-
+//  seedinf the data into database
 router.get('/',async (req,res)=>{
     
     await User.deleteMany({});

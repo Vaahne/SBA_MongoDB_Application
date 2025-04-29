@@ -32,6 +32,7 @@ const accountSchema = new mongoose.Schema({
 accountSchema.index({branch : 1});
 accountSchema.index({openDate : -1});
 
+//  to get all the accounts with balance more than given amount 
 accountSchema.statics.balanceAbove = function (val){
     return this.find({balance : {$gt : val}});
 }

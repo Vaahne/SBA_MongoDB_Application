@@ -11,6 +11,7 @@ router.route('/:id').get(accountControler.getSpecificAccount)
                     .delete(accountControler.deleteAccount)
                     .put(accountControler.updateAccount);
 
+// to get the accounts with greater balance than the given amount 
 router.get("/balance/:bal",async (req,res)=>{
     const accounts = await Accounts.balanceAbove(req.params.bal);
     res.json(accounts);
