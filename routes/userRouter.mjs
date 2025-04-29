@@ -4,8 +4,6 @@ import userControler from '../controllers/userControler.mjs';
 const router = express.Router();
 
 
-router.get('/seed',userControler.seed);
-
 router.route('/').get(userControler.getAllUsers)
                  .post(userControler.addUser);
                  

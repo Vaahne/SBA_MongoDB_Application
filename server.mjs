@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/conn.mjs';
+import bankHateoas from './hateoas/bankAppHateoas.mjs';
 import seedRouter from './routes/seedRouter.mjs';
 import accountRouter from './routes/accountRouter.mjs';
 import userRouter from './routes/userRouter.mjs';
@@ -17,7 +18,7 @@ connectDB();
 
 // routes
 app.use('/seed',seedRouter);    // can use this route once to the data to be seeded for all the models
-
+app.get('/',bankHateoas);
 //  roters for all the models
 app.use('/bank/accounts',accountRouter);
 app.use('/bank/users',userRouter);

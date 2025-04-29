@@ -29,4 +29,4 @@ async function updateUser(req,res) {
 }
 
 
-export default {deleteUser,updateUser,getAllUsers,getSpecificUsers,addUser,seed};
+export default {deleteUser,updateUser,getAllUsers,getSpecificUsers,addUser};

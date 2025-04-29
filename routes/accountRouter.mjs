@@ -3,11 +3,6 @@ import accountControler from '../controllers/accountController.mjs';
 
 const router = express.Router();
 
-
-router.get('/seed',async(req,res) => {
-
-});
-
 router.route('/').get(accountControler.getAllAccounts)
                  .post(accountControler.addAccount);
                  
