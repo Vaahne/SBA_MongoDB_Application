@@ -29,5 +29,6 @@ const accountSchema = new mongoose.Schema({
         match: [/^\S+@\S+\.\S+$/, 'Please use a valid email address']
     }   
 });
-
+accountSchema.index({branch : 1});
+accountSchema.index({openDate : -1});
 export default mongoose.model("Account",accountSchema);
