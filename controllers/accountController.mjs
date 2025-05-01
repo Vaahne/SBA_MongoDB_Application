@@ -2,9 +2,23 @@ import Account from '../models/Accounts.mjs';
 
 // To add an account into db
 async function addAccount(req,res){
+    const lastInserted = await Account.find().sort({_id:-1}).limit(1);
+    const accountNum = newAccNumber(lastInserted[0].accountNumber);
+
+    req.body.accountNumber = accountNum;    
     let newAccount = await Account.create(req.body);
     res.json(newAccount);
 }
+
+function newAccNumber(accNum){
+    const newAcc = Number(accNum.slice(3,accNum.length))+1;
+    if(newAcc < 99)
+        return "ACC0"+newAcc;
+    else
+        return "ACC"+newAcc;
+}
+
+
 // to delete an account from db
 async function deleteAccount(req,res) {
     const deletedAccount = await Account.findByIdAndDelete(req.params.id);

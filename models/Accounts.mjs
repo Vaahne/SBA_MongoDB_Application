@@ -8,7 +8,8 @@ const accountSchema = new mongoose.Schema({
     },
     name:{
         type: String,
-        required: true
+        required: true,
+        minlength: [4,'Name should be atleast 4 characteers']
     },
     branch:{
         type:String,
