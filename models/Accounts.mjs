@@ -36,7 +36,7 @@ const accountSchema = new mongoose.Schema({
         match: [/^\S+@\S+\.\S+$/, 'Please use a valid email address']
     }   
 });
-accountSchema.index({branch : 1});
+accountSchema.index({balance : 1});
 accountSchema.index({openDate : -1});
 
 //  to get all the accounts with balance more than given amount 
