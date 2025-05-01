@@ -10,12 +10,11 @@ const userSchema = new mongoose.Schema({
         type: Date,
         required: true,
         validate:{
-            validation: function (d){
+            validator: function (d){
                 return d<=Date.now()
             },
             message: `Date cannot be greater than today's date!`
-        }
-        
+        }        
     },
     email:{
         type: String,

@@ -22,25 +22,26 @@ function newAccNumber(accNum){
 // to delete an account from db
 async function deleteAccount(req,res) {
     const deletedAccount = await Account.findByIdAndDelete(req.params.id);
-    if(!deleteAccount) res.json({message: `No account found with given id`});
+    if(!deletedAccount) return res.json({message: `No account found with given id`});
     res.json(deletedAccount);
 }
 // to get all the accounts 
 async function getAllAccounts(req,res) {
     const allAccounts = await Account.find({});
-    if(allAccounts.length == 0) res.json({message : `No Data found`});
+    if(allAccounts.length == 0) return res.json({message : `No Data found`});
     res.json(allAccounts);
 }
 // to get specific account by id
 async function getSpecificAccount(req,res) {
     const account = await Account.findById(req.params.id);
-    if(!account) res.json({message:`No account found with given Id`});
+    if(!account) return res.json({message:`No account found with given Id`});
     res.json(account);
 }
 //  to update an account by id
 async function updateAccount(req,res) {
+    delete req.body.accountNumber;
     const account = await Account.findByIdAndUpdate(req.params.id,req.body,{new:true});
-    if(!account) res.json({message:`No account found with given Id`});
+    if(!account) return res.json({message:`No account found with given Id`});
     res.json(account);
 }
 

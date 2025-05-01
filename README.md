@@ -3,6 +3,10 @@
  + users
  + accounts 
  + withdraw
+## Getting started
+ + Install dependencies (npm i)
+ +  Start the server (npm start)
+
 # Routes
  ## API Reference
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION
