@@ -21,7 +21,13 @@ const accountSchema = new mongoose.Schema({
     openDate:{
         type: Date,
         required: true,
-        default : Date.now
+        default : Date.now,
+        validate:{
+            validator : function (v){
+                return v <= Date.now();
+            },
+            message: 'Account cannot be opened for the future date'
+        }
     },
     email:{
         type: String,

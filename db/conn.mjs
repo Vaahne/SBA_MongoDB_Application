@@ -19,6 +19,10 @@ async function connectDB(){
 
 export default connectDB;
 
+
+
+
+
 //  using mongoDB
 // const client = new MongoClient(connectionStr);
 
