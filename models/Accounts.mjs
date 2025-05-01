@@ -23,7 +23,7 @@ const accountSchema = new mongoose.Schema({
         type: Date,
         required: true,
         default : Date.now,
-        validate:{
+        validate:{  // date validation, cannot be future date
             validator : function (v){
                 return v <= Date.now();
             },

@@ -4,12 +4,18 @@ const userSchema = new mongoose.Schema({
     name:{
         type:String,
         required: true,
-        message: `Name must be provided!`
+        minlength: [4,'Name should be atleast 4 characters'],
     },
     dob:{
         type: Date,
         required: true,
-        message: `Date of Birth cannot be empty!`
+        validate:{
+            validation: function (d){
+                return d<=Date.now()
+            },
+            message: `Date cannot be greater than today's date!`
+        }
+        
     },
     email:{
         type: String,
