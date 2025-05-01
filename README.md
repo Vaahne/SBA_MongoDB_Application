@@ -1,4 +1,5 @@
 ## Bank Application
+ A simple API for managing bank users, accounts, and withdrawals. Built with Node.js and Express, connected to a MongoDB database.
  + users
  + accounts 
  + withdraw
