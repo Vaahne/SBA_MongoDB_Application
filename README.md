@@ -1,7 +1,7 @@
 ## Bank Application
- users
- accounts 
- withdraw
+ + users
+ + accounts 
+ + withdraw
 # Routes
  ## API Reference
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION
