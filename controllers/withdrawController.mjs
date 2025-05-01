@@ -24,6 +24,7 @@ async function getSpecificWithdraws(req,res) {
 }
 // to update withdraw transaction by id
 async function updateWithdraw(req,res) {
+    delete req.body.accountNumber;
     const withdraw = await Withdraw.findByIdAndUpdate(req.params.id,req.body,{new:true});
     if(!withdraw) return res.json({message : `No withdraw transaction found!!`});
     res.json(withdraw);
