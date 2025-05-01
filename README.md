@@ -3,10 +3,6 @@
  + users
  + accounts 
  + withdraw
-## Getting started
- + Install dependencies (npm i)
- +  Start the server (npm start)
-
 # Routes
  ## API Reference
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION
@@ -29,3 +25,8 @@ GET | /bank/withdraws/:id | To get specific withdraw with id |
 DELETE | /bank/withdraws/:id | To delete specific withdrawel |
 POST | /bank/withdraws | To add new withdrawel into DB |
 PUT | /bank/withdraws/:id | update withdrawel details with id |
+
+## Getting started
+ + Install dependencies (npm i)
+ +  Start the server (npm start)
+ + Seed the database
