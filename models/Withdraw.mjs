@@ -15,7 +15,6 @@ withDrawSchema.index({accountNumber:1});
 
 // to get all transactions of an Account
 withDrawSchema.statics.allTransactionsofAccount= function (accNum){
-    console.log(accNum);
     return this.find({accountNumber : accNum});
 }
 
