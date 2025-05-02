@@ -23,9 +23,11 @@ POST | /bank/accounts | Post account into DB |
 PUT | /bank/accounts/:id | update account details with id |
 GET | /bank/withdraws | To get all Withdrawels|
 GET | /bank/withdraws/:id | To get specific withdraw with id |
+GET | /bank/withdraws/account/:account_id | to get all withdraw transactions of an Account |
 DELETE | /bank/withdraws/:id | To delete specific withdrawel |
 POST | /bank/withdraws | To add new withdrawel into DB |
 PUT | /bank/withdraws/:id | update withdrawel details with id |
+
 
 ## Getting started
  + Install dependencies (npm i)
